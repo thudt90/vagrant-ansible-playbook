@@ -1,0 +1,16 @@
+---
+
+#- name: Update apt cache
+#  command: apt update
+
+- name: Install NGINX web server
+  #apt: name=nginx state=present
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: Install htop
+  apt:
+    name: htop
+    state: present
